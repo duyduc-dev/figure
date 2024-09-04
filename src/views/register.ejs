@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mt-5 mb-4">Register</h2>
+      <form method="POST" action="/register">
+        <div class="form-group mb-4">
+          <label for="email">Email</label>
+          <input
+            name="email"
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            required
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="fullName">fullName</label>
+          <input
+            name="fullName"
+            type="text"
+            class="form-control"
+            id="fullName"
+            placeholder="Enter fullName"
+            required
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="username">Username</label>
+          <input
+            name="username"
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="Enter username"
+            required
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            name="confirmPassword"
+            type="password"
+            class="form-control"
+            id="confirm-password"
+            placeholder="Confirm password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mb-4">
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

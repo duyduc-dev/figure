@@ -1,0 +1,180 @@
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Chi tiết sản phẩm</h3>
+        <span class="breadcrumb">
+          <a href="/">Trang chủ</a> > <a href="/shop">Shop</a>
+          <%= product.title %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="single-product section">
+  <div class="container">
+    <div class="row-figure-detailed gap-5">
+      <div class="col-lg-6">
+        <div class="left-image">
+          <img src="<%= product.img %>" alt="" />
+        </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <h4><%= product.title %></h4>
+        <span class="price"><em>$32</em> <%= product.price %></span>
+        <p>
+          ✅ Mô hình Zenitsu hàng chính hãng <br />
+          👉THÔNG TIN SẢN PHẨM <br />
+          🫶TÊN SẢN PHẨM : <%= product.title %> <br />
+          🏆HÃNG SẢN XUẤT : bandai <br />
+          ✍️KÍCH THƯỚC SẢN PHẨM : Cao 15cm <br />
+          👌GIÁ SẢN PHẨM : $22 , $10
+        </p>
+        <br />
+        <form id="qty" action="#">
+          <input
+            type="qty"
+            class="form-control"
+            id="1"
+            aria-describedby="quantity"
+            placeholder="1"
+          />
+          <button type="submit" class="btn-add-card">
+            <i class="fa fa-shopping-bag"></i> Thêm giỏ hàng
+          </button>
+        </form>
+        <ul>
+          <li><span>ID:</span> 225133</li>
+          <li><span>Thể loại:</span> <a href="#">Kimetsu No Yaiba</a></li>
+          <li>
+            <span>Multi-tags:</span> <a href="#"><%= product.category %></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-12">
+        <div class="sep"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="more-info">
+  <div class="container">
+    <div class="row-tab-content">
+      <div class="col-lg-12">
+        <div class="tabs-content">
+          <div class="row">
+            <div class="nav-wrapper">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="description-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#description"
+                    type="button"
+                    role="tab"
+                    aria-controls="description"
+                    aria-selected="true"
+                  >
+                    Description
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="reviews-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#reviews"
+                    type="button"
+                    role="tab"
+                    aria-controls="reviews"
+                    aria-selected="false"
+                  >
+                    Reviews (1)
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="description"
+                role="tabpanel"
+                aria-labelledby="description-tab"
+              >
+                <p>
+                  Trước khi bạn đặt mua vui lòng check lại giá hiện tại với
+                  admin, vì khả năng giá đã thay đổi so với lần cập nhật gần
+                  nhất, hoặc hết hàng, hết suất order. Do giới hạn số lượng, độ
+                  hot sẽ hiếm dần theo thời gian, dẫn tới giá tăng.
+                </p>
+                <br />
+                <p>
+                  Với sản phẩm CÓ SẴN, bạn sẽ được giao ngay ( Thời gian giao
+                  hàng kể từ ngày xuất kho từ 1-5 ngày ) Với sản phẩm ĐẶT TRƯỚC,
+                  bạn cần cọc 50% giá trị sản phẩm. Hàng về VN khoảng 2-3 tuần
+                  sau khi phát hành. Lịch phát hành dự kiến như thông tin chi
+                  tiết bên dưới. Với sản phẩm Pre - Order ( hàng đặt trước ) cần
+                  đặt cọc hoặc full nếu khách có điều kiện :v, số tiền cũng như
+                  thời gian hàng về shop có ghi cụ thể ở phần Thông tin sản
+                  phẩm, thời gian phát hành có thể chậm hơn do vấn đề nhân công,
+                  dịch bệnh hoặc một số vấn đề khách ảnh hưởng tới. Hỗ trợ ship
+                  cod toàn quốc & Quốc tế Hỗ trợ gãy vỡ, fix lỗi, đổi part ( Tùy
+                  trường hợp ) Cảm ơn mọi người đã ghé thăm !
+                </p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="reviews"
+                role="tabpanel"
+                aria-labelledby="reviews-tab"
+              >
+                <p>Sản phẩm thật tuyệt :v</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section categories related-games">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h6><%= product.categiry %></h6>
+          <h2>Có liên quan</h2>
+        </div>
+        <div class="main-button">
+          <a href="/shop">View All</a>
+        </div>
+      </div>
+      <div class="col-lg col-sm-6 col-xs-12 gap-4">
+        <% for (let i = 0; i < relateProduct.length; i++) { %>
+        <div class="item">
+          <h4><%= relateProduct[i].category %></h4>
+          <div class="thumb">
+            <a href="/product-detail?id=<%= relateProduct[i].id %>">
+              <img src="<%= relateProduct[i].img %>" alt="" />
+            </a>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const currentProd = {
+    id: Number("<%- product.id %>"),
+    img: "<%- product.img %>",
+    title: "<%- product.title %>",
+    category: "<%- product.titcategoryle %>",
+    price: "<%- product.price %>",
+    type: "<%- product.type %>",
+  };
+</script>

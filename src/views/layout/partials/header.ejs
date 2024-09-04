@@ -1,0 +1,110 @@
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a href="/" class="logo">
+            <img
+              src="/assets/images/logofigure4.1.png"
+              alt=""
+              style="width: 200px; margin-left: 2rem"
+            />
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li>
+              <a href="/" class="<%= type === 'home' ? 'active' : '' %>"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a href="/shop" class="<%= type === 'shop' ? 'active' : '' %>"
+                >Shop</a
+              >
+            </li>
+            <!-- <li>
+              <a
+                href="/product-detail"
+                class="<%= type === 'product-detail' ? 'active' : '' %>"
+                >Chi tiết sản phẩm</a
+              >
+            </li> -->
+            <li>
+              <a
+                href="/contact"
+                class="<%= type === 'contact' ? 'active' : '' %>"
+              >
+                Liên hệ
+              </a>
+            </li>
+            <li>
+              <a href="/cart" class="<%= type === 'cart' ? 'active' : '' %>">
+                <i class="fa-solid fa-cart-shopping"></i>
+                (<span class="cart-count">0</span>)
+              </a>
+            </li>
+            <li class="d-flex align-items-center">
+              <% if(user !== undefined){ %>
+              <div class="d-flex align-items-center gap-5 text-white">
+                <p class="mb-0 text-white" id="name-user fw-semibold">
+                  <%= user.name || user.username %>
+                </p>
+                <a
+                  href="/logout"
+                  class="btn d-flex align-items-center btn-logout"
+                >
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                </a>
+              </div>
+
+              <% } else { %>
+              <a href="#" class="btn-login"> Đăng nhập </a>
+              <% } %>
+            </li>
+          </ul>
+          <a class="menu-trigger">
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<div class="modal-login-container">
+  <div class="overlay"></div>
+  <form method="POST" action="/login" class="modal-login-inner">
+    <h3>Login</h3>
+    <div class="form-input">
+      <label for="email" class="form-label">Email</label>
+      <input
+        name="email"
+        type="text"
+        class="input"
+        spellcheck="false"
+        autocomplete="off"
+        id="email"
+      />
+    </div>
+    <div class="form-input">
+      <label for="password" class="form-label">Mật khẩu</label>
+      <input
+        type="password"
+        name="password"
+        spellcheck="false"
+        autocomplete="off"
+        class="input"
+        id="password"
+      />
+    </div>
+    <div class="d-flex justify-content-end gap-2">
+      <a href="/register" class="btn mt-2">Đăng ký</a>
+      <button type="submit" class="btn-login">Đăng nhập</button>
+    </div>
+  </form>
+</div>

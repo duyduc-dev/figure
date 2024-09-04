@@ -1,0 +1,117 @@
+:root {
+  --modal-background-color: #ffffff;
+  --modal-overlay-color: #00000080;
+
+  --color-primary: #ee626b;
+}
+
+.modal-login-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--modal-overlay-color);
+  z-index: 99999999999999999;
+}
+
+.modal-login-container.opening {
+  display: block;
+}
+
+.modal-login-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal-login-container .modal-login-inner {
+  background-color: var(--modal-background-color);
+  position: absolute;
+  max-width: 360px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-login-container .input {
+  outline: none;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 46px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.modal-login-container .form-label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.modal-login-container .form-input {
+  margin-top: 16px;
+}
+
+.modal-login-container .btn-login {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 12px 20px;
+  color: var(--modal-background-color);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+.cart-header h1 {
+  margin: 0;
+}
+.cart-items {
+  padding: 10px;
+}
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.item-card img {
+  width: 100px;
+  height: auto;
+}
+.item-card .details {
+  flex: 1;
+  margin-left: 10px;
+}
+.item-card .actions {
+  text-align: right;
+}
+.total-price {
+  padding: 10px;
+  text-align: right;
+  font-weight: bold;
+}
+.empty-cart {
+  padding: 20px;
+  text-align: center;
+}
+.cart-actions {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,192 @@
+<div class="main-banner">
+  <div class="container">
+    <div class="row-header-index-page">
+      <div class="col-lg-6">
+        <div class="caption header-text">
+          <h6>Chào mừng đến với H&T shop</h6>
+          <h2>Nơi sở hữu mô hình Figure số 1 Việt Nam</h2>
+          <p>
+            Shop H&T tại TP.HCM chuyên bán sản phẩm mô hình anime, gundam, hoạt
+            hình 3d. Bạn có thể mua đa dạng mô hình từ gameprize, nendoroid, mô
+            hình scale, resin, gundam... và các sản phẩm anime goods nhồi bông,
+            card bo góc.
+          </p>
+          <div class="search-input">
+            <form id="search" action="#">
+              <input
+                type="text"
+                placeholder="Bạn tìm gì..."
+                id="searchText"
+                name="searchKeyword"
+                onkeypress="handle"
+              />
+              <button role="button">Tìm kiếm</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-2">
+        <div class="right-image">
+          <img src="assets/images/batluongsoai.jpeg" alt="" />
+          <span class="price">$22</span>
+          <span class="offer">-40%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section trending">
+  <div class="container">
+    <div class="row-special-figure-title">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h6>Xu hướng</h6>
+          <h2>Figure nổi bật</h2>
+        </div>
+
+        <div class="main-button">
+          <a href="/shop">View All</a>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <% for (let i = 0; i < trendingProducts.length; i++) { %>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="/product-detail?id=<%= trendingProducts[i].id %>">
+                <img
+                  class="trending-img"
+                  src="<%= trendingProducts[i].img %>"
+                  alt=""
+                />
+              </a>
+              <span class="price">
+                <em>$28</em> <%= trendingProducts[i].price %>
+              </span>
+            </div>
+            <div class="down-content">
+              <span class="category"><%= trendingProducts[i].category %></span>
+              <h4><%= trendingProducts[i].title %></h4>
+              <a href="/product-detail?id=<%= trendingProducts[i].id %>"
+                ><i class="fa fa-shopping-bag"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section most-played">
+  <div class="container">
+    <div class="row-best-selling-title">
+      <div class="section-heading">
+        <h6>TOP FIGURES</h6>
+        <h2>Mua nhiều nhất</h2>
+      </div>
+
+      <div class="main-button">
+        <a href="/shop">View All</a>
+      </div>
+    </div>
+    <div class="row-best-selling">
+      <% for (let i = 0; i < mostProduct.length; i++) { %>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="item">
+          <div class="thumb">
+            <a href="/product-detail?id=<%= mostProduct[i].id %>"
+              ><img src="<%= mostProduct[i].img %>" alt=""
+            /></a>
+          </div>
+          <div class="down-content">
+            <span class="category"><%= mostProduct[i].category %></span>
+            <h4><%= mostProduct[i].title %></h4>
+            <a href="/product-detail?id=<%= mostProduct[i].id %>">CHỌN</a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+<div class="section categories">
+  <div class="container">
+    <div class="row-categories-title">
+      <div class="section-heading">
+        <h6>Top Categories</h6>
+        <h2>Thể loại</h2>
+      </div>
+
+      <div class="row-categories gap-3">
+        <% for (let i = 0; i < topCategory.length; i++) { %>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4><%= topCategory[i].category %></h4>
+            <div class="thumb">
+              <a href="/product-detail?id=<%= topCategory[i].id %>"
+                ><img src="<%= topCategory[i].img %>" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <div class="container">
+      <div class="row-shopping-vip-account">
+        <div class="col-lg-5">
+          <div class="shop">
+            <div class="row-shopping-online">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Shop của chúng tôi</h6>
+                  <h2>
+                    Hãy Đặt Hàng Trước và Nhận Được <em>Giá tốt nhất</em> Cho
+                    Bạn!
+                  </h2>
+                </div>
+                <p>Chúng tôi luôn đáp ứng nhu cầu tốt nhất cho khách hàng.</p>
+                <div class="main-button">
+                  <a href="/shop">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-2 align-self-end">
+          <div class="subscribe">
+            <div class="row-shopping-online">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>VIP</h6>
+                  <h2>
+                    Được giảm giá tới $100 chỉ cần bạn <em>Đăng ký</em> VIP
+                  </h2>
+                </div>
+                <div class="search-input">
+                  <form id="subscribe" action="#">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Your email..."
+                    />
+                    <button type="submit">Đăng ký ngay</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

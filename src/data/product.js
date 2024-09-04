@@ -1,0 +1,91 @@
+const products = [
+  {
+    img: "assets/images/trend1.jpeg",
+    title: "Mô hình Thiên Ám Tinh",
+    category: "HH3D",
+    price: "$20",
+    type: "adv",
+  },
+  {
+    img: "assets/images/trending2.jpeg",
+    title: "Mô hình-Mỹ Đỗ Toa",
+    category: "HH3D",
+    price: "$44",
+    type: "adv",
+  },
+  {
+    img: "assets/images/trending3.jpeg",
+    title: "Mô hình-Songoku",
+    category: "MANGA",
+    price: "$44",
+    type: "str",
+  },
+  {
+    img: "assets/images/zenitsu.webp",
+    title: "Mô hình-Zenitsu",
+    category: "MANGA",
+    price: "$22",
+    type: "str",
+  },
+  {
+    img: "assets/images/most1.jpeg",
+    title: "Mô hình-Goku",
+    category: "MANGA",
+    price: "$26",
+    type: "str",
+  },
+  {
+    img: "assets/images/mostgoku33.jpeg",
+    title: "Mô hình-GoKuSSJ3",
+    category: "MANGA",
+    price: "$20",
+    type: "str",
+  },
+  {
+    img: "assets/images/most2.webp",
+    title: "Astray Red Frame",
+    category: "GUNDAM",
+    price: "$22",
+    type: "rac",
+  },
+  {
+    img: "assets/images/categories2.jpg",
+    title: "Gundam Baiding-Sliver",
+    category: "GUNDAM",
+    price: "$22",
+    type: "rac",
+  },
+  {
+    img: "assets/images/trending4.jpeg",
+    title: "NARUTO CỬU VĨ",
+    category: "NARUTO",
+    price: "$32",
+    type: "str",
+  },
+  {
+    img: "assets/images/POKEMON.jpg",
+    title: "POKEMON-Huyền thoại",
+    category: "POKEMON",
+    price: "$18",
+    type: "str",
+  },
+  {
+    img: "assets/images/most3.webp",
+    title: "Gundame Snow White",
+    category: "GUNDAM",
+    price: "$24",
+    type: "rac",
+  },
+  {
+    img: "assets/images/categories1.jpg",
+    title: "GUNDAM Astray",
+    category: "GUNDAM",
+    price: "$30",
+    type: "rac",
+  },
+];
+
+module.exports = products.map((item, index) => ({
+  id: index,
+  ...item,
+}));
